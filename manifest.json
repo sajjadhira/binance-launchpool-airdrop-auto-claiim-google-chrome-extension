@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Binance Launchpool",
+  "version": "1.0.0",
+  "description": "Binance Launchpool auto claim",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "storage",
+    "tabs",
+    "cookies",
+    "contextMenus",
+    "webRequest",
+    "webNavigation",
+    "storage",
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://launchpad.binance.com/*"],
+      "js": ["app.js"],
+      "all_frames": true
+    }
+  ]
+}
